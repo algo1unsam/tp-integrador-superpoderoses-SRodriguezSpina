@@ -8,16 +8,77 @@ describe "Superpoderoses" {
 	 * se debe remover la declaración de la variable y la línea en que se sugiere la instanciación.
 	 */
 
-	const altaVelocidad
-	const superVelocidad
-	const vueloRasante
-	const vueloAlto
-	const vueloRasanteAmplificado
-	const superVelocidadAmplificada
+	const altaVelocidad = new Velocidad(
+		rapidez = 2,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	)
+	const superVelocidad = new Velocidad(
+		rapidez = 3,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	)
+	const vueloRasante = new Vuelo(
+		alturaMaxima = 10,
+		energiaDespegue = 10,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	)
+	const vueloAlto = new Vuelo(
+		alturaMaxima = 300,
+		energiaDespegue = 200,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	)
+	const vueloRasanteAmplificado = new PoderAmplificador(
+		amplificador = 4,
+		poderBase = vueloRasante,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	)
+	const superVelocidadAmplificada = new PoderAmplificador(
+		amplificador = 3,
+		poderBase = superVelocidad,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	)
+//	class Heroe{
+//	var property agilidad=0
+//	var property fuerza=0
+//	var property habilidadEspecial=0
+//	var property espiritualidad=0
+//	var property estrategia=0 
+//	const poderes = []
+//	
+//	method agregarPoder(poder){
+//		poderes.add(poder)
+//	}
+//	method capacidadDeBatalla() {
+//		return poderes.sum()
+//	}
+//}
+	const capitanaPatriaGrande = new Heroe(
+		estrategia = 3,
+		espiritualidad = 5,
+		poderes = [superVelocidadAmplificada, vueloAlto]
+	)
 	
-	const capitanaPatriaGrande
-	const plusvaliaCero
-	const usinaDeDerechos
+	const plusvaliaCero = new Heroe(
+		estrategia = 2,
+		espiritualidad = 4,
+		poderes = [altaVelocidad, vueloRasanteAmplificado]
+	)
+	const usinaDeDerechos = new Heroe(
+		estrategia = 1,
+		espiritualidad = 6,
+		poderes = [vueloRasante]
+	)
 	
 	const cooperativaJusticiera
 	
