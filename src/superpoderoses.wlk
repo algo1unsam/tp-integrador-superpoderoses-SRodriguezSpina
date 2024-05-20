@@ -1,3 +1,4 @@
+
 class Heroe{
 	var property agilidad=0
 	var property fuerza=0
@@ -11,6 +12,11 @@ class Heroe{
 	}
 	method capacidadDeBatalla() {
 		return poderes.sum()
+	}
+	method afrontarPeligro(peligro) {
+		return ((self.capacidadDeBatalla() > peligro.capacidadDeBatalla()) and 
+				(poderes.contains(/*poder*/) or peligro.desechosRadioactivos())
+		)
 	}
 }
 
@@ -46,3 +52,39 @@ class PoderAmplificador inherits Poder{
 	override method fuerza(heroe) = poderBase
 	override method habilidadEspecial(heroe) = poderBase * amplificador
 }
+
+class Equipo {
+	const miembros = []
+	
+	method masVulnerable() {
+		
+	}
+	method calidad() {
+		
+	}
+	method mejoresPoderes(){
+		
+	}
+	
+}
+
+class Peligro {
+	var capacidadDeBatalla		// capacidad
+	var desechosRadioactivos 	// true o false
+	var nivelDeComplejidad
+	var cantPersonajesBanca
+	
+	method capacidadDeBatalla() {
+		return capacidadDeBatalla
+	}
+	method desechosRadopactivos() {
+		return desechosRadioactivos
+	}
+}
+
+class MetaHumanos {
+	
+}
+
+
+

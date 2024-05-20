@@ -7,7 +7,8 @@ describe "Superpoderoses" {
 	 * Si el diseño de la solución utiliza objetos bien conocidos en algunos casos entonces 
 	 * se debe remover la declaración de la variable y la línea en que se sugiere la instanciación.
 	 */
-
+	 
+// Poderes
 	const altaVelocidad = new Velocidad(
 		rapidez = 2,
 		agilidad = 0,
@@ -48,21 +49,8 @@ describe "Superpoderoses" {
 		fuerza = 0,
 		habilidadEspecial = 0
 	)
-//	class Heroe{
-//	var property agilidad=0
-//	var property fuerza=0
-//	var property habilidadEspecial=0
-//	var property espiritualidad=0
-//	var property estrategia=0 
-//	const poderes = []
-//	
-//	method agregarPoder(poder){
-//		poderes.add(poder)
-//	}
-//	method capacidadDeBatalla() {
-//		return poderes.sum()
-//	}
-//}
+
+// Héroes
 	const capitanaPatriaGrande = new Heroe(
 		estrategia = 3,
 		espiritualidad = 5,
@@ -79,13 +67,35 @@ describe "Superpoderoses" {
 		espiritualidad = 6,
 		poderes = [vueloRasante]
 	)
-	
-	const cooperativaJusticiera
-	
-	const peligroSencillo
-	const peligroSencilloRadiactivo 
-	const peligroModerado
-	const peligroAlto
+// Cooperativa
+	const cooperativaJusticiera = new Equipo(
+		miembros = [capitanaPatriaGrande, plusvaliaCero, usinaDeDerechos]
+	)
+// Peligros
+	const peligroSencillo = new Peligro(
+		capacidadDeBatalla = 30,
+		desechosRadioactivos = false,
+		nivelDeComplejidad = 1,
+		cantPersonajesBanca = 2
+	)
+	const peligroSencilloRadiactivo = new Peligro(
+		capacidadDeBatalla = 30,
+		desechosRadioactivos = true,
+		nivelDeComplejidad = 1,
+		cantPersonajesBanca = 2
+	)
+	const peligroModerado = new Peligro(
+		capacidadDeBatalla = 50,
+		desechosRadioactivos = true,
+		nivelDeComplejidad = 2,
+		cantPersonajesBanca = 1
+		)
+	const peligroAlto = new Peligro(
+		capacidadDeBatalla = 400,
+		desechosRadioactivos = true,
+		nivelDeComplejidad = 3,
+		cantPersonajesBanca = 2
+		)
 	
 	const fragmentadorMonopolios
 	const educadorPublico
