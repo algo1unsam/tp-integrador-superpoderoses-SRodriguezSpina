@@ -9,96 +9,28 @@ describe "Superpoderoses" {
 	 */
 	 
 // Poderes
-	const altaVelocidad = new Velocidad(
-		rapidez = 2,
-		agilidad = 0,
-		fuerza = 0,
-		habilidadEspecial = 0
-	)
-	const superVelocidad = new Velocidad(
-		rapidez = 3,
-		agilidad = 0,
-		fuerza = 0,
-		habilidadEspecial = 0
-	)
-	const vueloRasante = new Vuelo(
-		alturaMaxima = 10,
-		energiaDespegue = 10,
-		agilidad = 0,
-		fuerza = 0,
-		habilidadEspecial = 0
-	)
-	const vueloAlto = new Vuelo(
-		alturaMaxima = 300,
-		energiaDespegue = 200,
-		agilidad = 0,
-		fuerza = 0,
-		habilidadEspecial = 0
-	)
-	const vueloRasanteAmplificado = new PoderAmplificador(
-		amplificador = 4,
-		poderBase = vueloRasante,
-		agilidad = 0,
-		fuerza = 0,
-		habilidadEspecial = 0
-	)
-	const superVelocidadAmplificada = new PoderAmplificador(
-		amplificador = 3,
-		poderBase = superVelocidad,
-		agilidad = 0,
-		fuerza = 0,
-		habilidadEspecial = 0
-	)
+	var altaVelocidad 
+	var superVelocidad 
+	var vueloRasante 
+	var vueloAlto 
+	var vueloRasanteAmplificado 
+	var superVelocidadAmplificada 
 
 // Héroes
-	const capitanaPatriaGrande = new Heroe(
-		estrategia = 3,
-		espiritualidad = 5,
-		poderes = [superVelocidadAmplificada, vueloAlto]
-	)
+	var capitanaPatriaGrande 
 	
-	const plusvaliaCero = new Heroe(
-		estrategia = 2,
-		espiritualidad = 4,
-		poderes = [altaVelocidad, vueloRasanteAmplificado]
-	)
-	const usinaDeDerechos = new Heroe(
-		estrategia = 1,
-		espiritualidad = 6,
-		poderes = [vueloRasante]
-	)
+	var plusvaliaCero 
+	var usinaDeDerechos 
 // Cooperativa
-	const cooperativaJusticiera = new Equipo(
-		miembros = [capitanaPatriaGrande, plusvaliaCero, usinaDeDerechos]
-	)
+	var cooperativaJusticiera 
 // Peligros
-	const peligroSencillo = new Peligro(
-		capacidadDeBatalla = 30,
-		desechosRadioactivos = false,
-		nivelDeComplejidad = 1,
-		cantPersonajesBanca = 2
-	)
-	const peligroSencilloRadiactivo = new Peligro(
-		capacidadDeBatalla = 30,
-		desechosRadioactivos = true,
-		nivelDeComplejidad = 1,
-		cantPersonajesBanca = 2
-	)
-	const peligroModerado = new Peligro(
-		capacidadDeBatalla = 50,
-		desechosRadioactivos = true,
-		nivelDeComplejidad = 2,
-		cantPersonajesBanca = 1
-		)
-	const peligroAlto = new Peligro(
-		capacidadDeBatalla = 400,
-		desechosRadioactivos = true,
-		nivelDeComplejidad = 3,
-		cantPersonajesBanca = 2
-		)
+	var peligroSencillo 
+	var peligroSencilloRadiactivo 
+	var peligroModerado 
+	var peligroAlto 
 	
-	const fragmentadorMonopolios
-	const educadorPublico
+	var fragmentadorMonopolios
+	var educadorPublico
 		
 	
 	method initialize(){
@@ -107,28 +39,96 @@ describe "Superpoderoses" {
 		
 		// Punto 1
 		// Poderes
-		altaVelocidad = null // TODO: constrir/obtener un poder de velocidad con rapidez = 2
-		superVelocidad = null // TODO: constrir/obtener un poder de velocidad con rapidez = 3
-		vueloRasante = null // TODO: constrir/obtener un poder de vuelo con altura maxima = 10 y energia para despegue = 10
-		vueloAlto = null // TODO: constrir/obtener un poder de vuelo con altura maxima = 300 y energia para despegue = 200
-		vueloRasanteAmplificado = null // TODO: constrir/obtener un poder amplificador con poder base = vueloRasante y amplificador = 4
-		superVelocidadAmplificada = null // TODO: constrir/obtener un poder amplificador con poder base = superVelocidad y amplificador = 3
+		altaVelocidad = new Velocidad(
+		rapidez = 2,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	) // TODO: constrir/obtener un poder de velocidad con rapidez = 2
+		superVelocidad = new Velocidad(
+		rapidez = 3,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	) // TODO: constrir/obtener un poder de velocidad con rapidez = 3
+		vueloRasante = new Vuelo(
+		alturaMaxima = 10,
+		energiaDespegue = 10,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	) // TODO: constrir/obtener un poder de vuelo con altura maxima = 10 y energia para despegue = 10
+		vueloAlto = new Vuelo(
+		alturaMaxima = 300,
+		energiaDespegue = 200,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	) // TODO: constrir/obtener un poder de vuelo con altura maxima = 300 y energia para despegue = 200
+		vueloRasanteAmplificado = new PoderAmplificador(
+		amplificador = 4,
+		poderBase = vueloRasante,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	) // TODO: constrir/obtener un poder amplificador con poder base = vueloRasante y amplificador = 4
+		superVelocidadAmplificada = new PoderAmplificador(
+		amplificador = 3,
+		poderBase = superVelocidad,
+		agilidad = 0,
+		fuerza = 0,
+		habilidadEspecial = 0
+	) // TODO: constrir/obtener un poder amplificador con poder base = superVelocidad y amplificador = 3
 	
 		// Personajes 
-		capitanaPatriaGrande = null // TODO: constrir/obtener un personaje con estrategia = 3, espiritualidad = 5 y poderes = superVelocidadAmplificada y vueloAlto
-		plusvaliaCero = null // TODO: constrir/obtener un personaje con estrategia = 2, espiritualidad = 4 y poderes = altaVelocidad y vueloRasanteAmplificado
-		usinaDeDerechos = null // TODO: constrir/obtener un personaje con estrategia = 1, espiritualidad = 6 y poderes = vueloRasante
+		capitanaPatriaGrande = new Heroe(
+		estrategia = 3,
+		espiritualidad = 5,
+		poderes = [superVelocidadAmplificada, vueloAlto]
+	) // TODO: constrir/obtener un personaje con estrategia = 3, espiritualidad = 5 y poderes = superVelocidadAmplificada y vueloAlto
+		plusvaliaCero = new Heroe(
+		estrategia = 2,
+		espiritualidad = 4,
+		poderes = [altaVelocidad, vueloRasanteAmplificado]
+	) // TODO: constrir/obtener un personaje con estrategia = 2, espiritualidad = 4 y poderes = altaVelocidad y vueloRasanteAmplificado
+		usinaDeDerechos = new Heroe(
+		estrategia = 1,
+		espiritualidad = 6,
+		poderes = [vueloRasante]
+	) // TODO: constrir/obtener un personaje con estrategia = 1, espiritualidad = 6 y poderes = vueloRasante
 		
 		// Punto 2
 		// Equipo 
-		cooperativaJusticiera = null // TODO: constrir/obtener un conformado por capitanaPatriaGrande, plusvaliaCero y usinaDeDerechos
+		cooperativaJusticiera = new Equipo(
+		miembros = [capitanaPatriaGrande, plusvaliaCero, usinaDeDerechos]
+	) // TODO: constrir/obtener un conformado por capitanaPatriaGrande, plusvaliaCero y usinaDeDerechos
 		
 		// Punto 3 
 		// Peligros
-		peligroSencillo = null // TODO: constrir/obtener un peligro con capacidad de batalla = 30 y NO tiene desechos radiactivos  
-		peligroSencilloRadiactivo = null // TODO: constrir/obtener un peligro con capacidad de batalla = 30 y tiene desechos radiactivos
-		peligroModerado = null // TODO: constrir/obtener un peligro con capacidad de batalla = 50 y NO tiene desechos radiactivos
-		peligroAlto = null // TODO: constrir/obtener un peligro con capacidad de batalla = 400 y tiene desechos radiactivos
+		peligroSencillo = new Peligro(
+		capacidadDeBatalla = 30,
+		desechosRadioactivos = false,
+		nivelDeComplejidad = 1,
+		cantPersonajesBanca = 2
+	) // TODO: constrir/obtener un peligro con capacidad de batalla = 30 y NO tiene desechos radiactivos  
+		peligroSencilloRadiactivo = new Peligro(
+		capacidadDeBatalla = 30,
+		desechosRadioactivos = true,
+		nivelDeComplejidad = 1,
+		cantPersonajesBanca = 2
+	) // TODO: constrir/obtener un peligro con capacidad de batalla = 30 y tiene desechos radiactivos
+		peligroModerado = new Peligro(
+		capacidadDeBatalla = 50,
+		desechosRadioactivos = true,
+		nivelDeComplejidad = 2,
+		cantPersonajesBanca = 1
+		) // TODO: constrir/obtener un peligro con capacidad de batalla = 50 y NO tiene desechos radiactivos
+		peligroAlto = new Peligro(
+		capacidadDeBatalla = 400,
+		desechosRadioactivos = true,
+		nivelDeComplejidad = 3,
+		cantPersonajesBanca = 2
+		) // TODO: constrir/obtener un peligro con capacidad de batalla = 400 y tiene desechos radiactivos
 
         // Punto 4
         // TODO: agregar al peligroSencillo nivel de complejidad = 1 y cantidad de personajes que se banca en simultaneo = 2
